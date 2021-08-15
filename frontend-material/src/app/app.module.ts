@@ -12,6 +12,9 @@ import { ReservationsListComponent } from './components/reservations-list/reserv
 import { AddCashierComponent } from './components/add-cashier/add-cashier.component';
 import { EditCashierComponent } from './components/edit-cashier/edit-cashier.component';
 import { CashiersListComponent } from './components/cashiers-list/cashiers-list.component';
+import { AddPaymentComponent } from './components/add-payment/add-payment.component';
+import { EditPaymentComponent } from './components/edit-payment/edit-payment.component';
+import { PaymentsListComponent } from './components/payments-list/payments-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { CashiersListComponent } from './components/cashiers-list/cashiers-list.
     ReservationsListComponent,
     AddCashierComponent,
     EditCashierComponent,
-    CashiersListComponent
+    CashiersListComponent,
+    AddPaymentComponent,
+    EditPaymentComponent,
+    PaymentsListComponent
   ],
   imports: [
     BrowserModule,
