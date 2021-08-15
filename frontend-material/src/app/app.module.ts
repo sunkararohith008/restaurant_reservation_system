@@ -15,6 +15,9 @@ import { CashiersListComponent } from './components/cashiers-list/cashiers-list.
 import { AddPaymentComponent } from './components/add-payment/add-payment.component';
 import { EditPaymentComponent } from './components/edit-payment/edit-payment.component';
 import { PaymentsListComponent } from './components/payments-list/payments-list.component';
+import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
+import { EditEmployeeComponent } from './components/edit-employee/edit-employee.component';
+import { EmployeesListComponent } from './components/employees-list/employees-list.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { PaymentsListComponent } from './components/payments-list/payments-list.
     CashiersListComponent,
     AddPaymentComponent,
     EditPaymentComponent,
-    PaymentsListComponent
+    PaymentsListComponent,
+    AddEmployeeComponent,
+    EditEmployeeComponent,
+    EmployeesListComponent
   ],
   imports: [
     BrowserModule,
