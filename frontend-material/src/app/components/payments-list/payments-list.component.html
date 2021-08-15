@@ -1,1 +1,71 @@
-<p>payments-list works!</p>
+<div class="title-group">
+    <h1 class="mat-h1">Payments List</h1>
+    <mat-divider fxFlex="1 0"></mat-divider>
+  </div>
+  
+  <p *ngIf="PaymentData.length <= 0" class="no-data">There is no payment added yet!</p>
+  
+  <div class="container" *ngIf="PaymentData.length > 0">
+    <div class="mat-elevation-z8">
+      <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="_id">
+          <th mat-header-cell *matHeaderCellDef> Payment ID </th>
+          <td mat-cell *matCellDef="let element"> {{element._id}} </td>
+        </ng-container>
+  
+        <!-- <ng-container matColumnDef="payment_fname">
+          <th mat-header-cell *matHeaderCellDef> Payment Name </th>
+          <td mat-cell *matCellDef="let element"> {{element.payment_fname}} </td>
+        </ng-container> -->
+
+        <ng-container matColumnDef="payment_number">
+            <th mat-header-cell *matHeaderCellDef> Payment Number </th>
+            <td mat-cell *matCellDef="let element"> {{element.payment_number}} </td>
+          </ng-container>
+  
+          <ng-container matColumnDef="no_of_customers">
+              <th mat-header-cell *matHeaderCellDef> No of Customers </th>
+              <td mat-cell *matCellDef="let element"> {{element.no_of_customers}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="name_of_cashier">
+              <th mat-header-cell *matHeaderCellDef> Name of Cashier </th>
+              <td mat-cell *matCellDef="let element"> {{element.name_of_cashier}} </td>
+            </ng-container>
+  
+            <ng-container matColumnDef="total_amount">
+              <th mat-header-cell *matHeaderCellDef> Total Amount </th>
+              <td mat-cell *matCellDef="let element"> {{element.total_amount}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="mode_of_payment">
+                <th mat-header-cell *matHeaderCellDef> Mode Of Payment </th>
+                <td mat-cell *matCellDef="let element"> {{element.mode_of_payment}} </td>
+              </ng-container>
+  
+        <!-- <ng-container matColumnDef="payment_email">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let element"> {{element.payment_email}} </td>
+        </ng-container> -->
+  
+        <!-- <ng-container matColumnDef="section">
+          <th mat-header-cell *matHeaderCellDef> Section </th>
+          <td mat-cell *matCellDef="let element"> {{element.section}} </td>
+        </ng-container> -->
+  
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef> Action </th>
+          <td mat-cell *matCellDef="let element; let i = index;">
+            <button mat-raised-button color="primary" class="push-right"
+              [routerLink]="['/edit-payment/', element._id]">Edit</button>
+            <button mat-raised-button color="accent" (click)="deletePayment(i, element)">Delete</button>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+  
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+  </div>

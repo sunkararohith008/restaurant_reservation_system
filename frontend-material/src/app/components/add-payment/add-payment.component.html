@@ -1,1 +1,138 @@
-<p>add-payment works!</p>
+<!-- Title group  -->
+<div class="title-group">
+    <h1 class="mat-h1">Add Payment</h1>
+    <mat-divider fxFlex="1 0"></mat-divider>
+  </div>
+  
+  <!-- Form -->
+  <div class="inner-wrapper">
+    <form [formGroup]="paymentForm" (ngSubmit)="submitPaymentForm()" #resetPaymentForm="ngForm" novalidate>
+      <!-- Left block -->
+      <mat-card>
+        <div class="controlers-wrapper">
+          
+          <!-- Payment Number -->
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Payment Number" formControlName="payment_number">
+            <mat-error *ngIf="handleError('payment_number', 'required')">
+              You must provide a<strong> payment number</strong>
+            </mat-error>
+          </mat-form-field>
+
+           <!-- No.of Customers -->
+           <mat-form-field class="example-full-width">
+            <input matInput placeholder="Number Of Customers" formControlName="no_of_customers">
+            <mat-error *ngIf="handleError('no_of_customers', 'required')">
+              You must provide a<strong> number of customers</strong>
+            </mat-error>
+          </mat-form-field>
+
+           <!-- Name Of Cashier-->
+           <mat-form-field class="example-full-width">
+            <input matInput placeholder="Name of Cashier" formControlName="name_of_cashier">
+            <mat-error *ngIf="handleError('name_of_cashier', 'required')">
+              You must provide a<strong> name of cashier</strong>
+            </mat-error>
+          </mat-form-field>
+
+           <!-- Total Amount -->
+           <mat-form-field class="example-full-width">
+            <input matInput placeholder="Total Amount" formControlName=" total_amount">
+            <mat-error *ngIf="handleError(' total_amount', 'required')">
+              You must provide a<strong> Total Amount</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Mode of Payment-->
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="mode of payment" formControlName="mode_of_payment">
+            <mat-error *ngIf="handleError('mode_of_payment', 'required')">
+              You must provide a<strong> mode of payment</strong>
+            </mat-error>
+          </mat-form-field>
+  
+          <!-- Email -->
+          <!-- <mat-form-field class="example-full-width">
+            <input matInput placeholder="Payment email" formControlName="payment_email">
+            <mat-error *ngIf="handleError('payment_email', 'required')">
+              You must provide a<strong>payment email</strong>
+            </mat-error>
+          </mat-form-field> -->
+  
+          <!-- Section -->
+          <!-- <mat-form-field>
+            <mat-label>Section</mat-label>
+            <mat-select [(value)]="selected" formControlName="section">
+              <mat-option [value]="sectioinArray" *ngFor="let sectioinArray of SectioinArray">{{sectioinArray}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="handleError('section', 'required')">
+              Section is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card> -->
+  
+      <!-- Right block -->
+      <!-- <mat-card>
+        <div class="controlers-wrapper"> -->
+          <!-- Add subjects -->
+          <!-- <mat-form-field class="multiple-items">
+            <mat-chip-list #chipList>
+              <mat-chip *ngFor="let subjectArray of subjectArray" [selectable]="selectable" [removable]="removable"
+                (removed)="remove(subjectArray)">
+                {{subjectArray.name}}
+                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+              </mat-chip>
+              <input placeholder="Add subject" [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                (matChipInputTokenEnd)="add($event)">
+            </mat-chip-list>
+            <i class="material-icons tooltip-info" matTooltip="Enter subject name and press enter to add subjects">
+              info
+            </i>
+          </mat-form-field> -->
+  
+          <!-- Date of birth -->
+          <!-- <mat-form-field>
+            <input matInput readonly [matDatepicker]="picker" placeholder="Date of birth" formControlName="dob"
+              (dateChange)="formatDate($event)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="handleError('dob', 'required')">
+              Date of birth is required
+            </mat-error>
+          </mat-form-field> -->
+  
+          <!-- Date of payment -->
+          <!-- <mat-form-field>
+            <input matInput readonly [matDatepicker]="picker" placeholder="Date of Payment" formControlName="payment_date"
+              (dateChange)="formatDate($event)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="handleError('payment_date', 'required')">
+              Date of payment is required
+            </mat-error>
+          </mat-form-field> -->
+
+          <!-- Gender -->
+          <!-- <div class="misc-bottom-padding">
+            <mat-label>Gender:</mat-label>
+            <mat-radio-group aria-label="Select an option" formControlName="gender">
+              <mat-radio-button value="Male">Male</mat-radio-button>
+              <mat-radio-button value="Female">Female</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </mat-card> -->
+  
+      <!-- Submit & Reset -->
+      <mat-card>
+        <div class="full-wrapper button-wrapper">
+          <div class="button-wrapper">
+            <button mat-flat-button color="warn">Submit</button>
+          </div>
+        </div>
+      </mat-card>
+    
+  </div>
