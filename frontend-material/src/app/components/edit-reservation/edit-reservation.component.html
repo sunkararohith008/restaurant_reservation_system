@@ -1,1 +1,145 @@
-<p>edit-reservation works!</p>
+<!-- Title group  -->
+<div class="title-group">
+    <h1 class="mat-h1">Add Reservation</h1>
+    <mat-divider fxFlex="1 0"></mat-divider>
+  </div>
+  
+  <!-- Form -->
+  <div class="inner-wrapper">
+    <form [formGroup]="reservationForm" (ngSubmit)="updateReservationForm()" #resetReservationForm="ngForm" novalidate>
+      <!-- Left block -->
+      <mat-card>
+        <div class="controlers-wrapper">
+           <!-- Full Name -->
+           <mat-form-field class="example-full-width">
+            <input matInput placeholder="Customer Full Name" formControlName="customer_fullname">
+            <mat-error *ngIf="handleError('customer_fullname', 'required')">
+              You must provide a<strong>customer full name</strong>
+            </mat-error>
+          </mat-form-field>
+
+           <!-- Address -->
+           <mat-form-field class="example-full-width">
+            <input matInput placeholder="Customer Address" formControlName="customer_address">
+            <mat-error *ngIf="handleError('customer_address', 'required')">
+              You must provide a<strong>customer address</strong>
+            </mat-error>
+          </mat-form-field>
+
+           <!-- Reservation event-->
+           <mat-form-field class="example-full-width">
+            <input matInput placeholder="Reservation Event" formControlName="reservation_event">
+            <mat-error *ngIf="handleError('reservation_event', 'required')">
+              You must provide a<strong>reservation event</strong>
+            </mat-error>
+          </mat-form-field>
+
+           <!-- Customer Phone -->
+           <mat-form-field class="example-full-width">
+            <input matInput placeholder="Customer Phone" formControlName="customer_phone">
+            <mat-error *ngIf="handleError('customer_phone', 'required')">
+              You must provide a<strong>customer phone</strong>
+            </mat-error>
+          </mat-form-field>
+
+           <!-- No of persons -->
+           <mat-form-field class="example-full-width">
+            <input matInput placeholder="No.of persons" formControlName="No_of_persons">
+            <mat-error *ngIf="handleError('No_of_persons', 'required')">
+              You must provide a<strong>no of persons</strong>
+            </mat-error>
+          </mat-form-field>
+
+          <!-- Reservation Time -->
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Reservation Time" formControlName="reservation_time">
+            <mat-error *ngIf="handleError('reservation_time', 'required')">
+              You must provide a<strong>reservation time</strong>
+            </mat-error>
+          </mat-form-field>
+  
+          <!-- Email -->
+          <!-- <mat-form-field class="example-full-width">
+            <input matInput placeholder="Reservation email" formControlName="reservation_email">
+            <mat-error *ngIf="handleError('reservation_email', 'required')">
+              You must provide a<strong>reservation email</strong>
+            </mat-error>
+          </mat-form-field> -->
+  
+          <!-- Section -->
+          <!-- <mat-form-field>
+            <mat-label>Section</mat-label>
+            <mat-select [(value)]="selected" formControlName="section">
+              <mat-option [value]="sectioinArray" *ngFor="let sectioinArray of SectioinArray">{{sectioinArray}}
+              </mat-option>
+            </mat-select>
+            <mat-error *ngIf="handleError('section', 'required')">
+              Section is required
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card> -->
+  
+      <!-- Right block -->
+      <!-- <mat-card>
+        <div class="controlers-wrapper"> -->
+          <!-- Add subjects -->
+          <!-- <mat-form-field class="multiple-items">
+            <mat-chip-list #chipList>
+              <mat-chip *ngFor="let subjectArray of subjectArray" [selectable]="selectable" [removable]="removable"
+                (removed)="remove(subjectArray)">
+                {{subjectArray.name}}
+                <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+              </mat-chip>
+              <input placeholder="Add subject" [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                (matChipInputTokenEnd)="add($event)">
+            </mat-chip-list>
+            <i class="material-icons tooltip-info" matTooltip="Enter subject name and press enter to add subjects">
+              info
+            </i>
+          </mat-form-field> -->
+  
+          <!-- Date of birth -->
+          <!-- <mat-form-field>
+            <input matInput readonly [matDatepicker]="picker" placeholder="Date of birth" formControlName="dob"
+              (dateChange)="formatDate($event)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="handleError('dob', 'required')">
+              Date of birth is required
+            </mat-error>
+          </mat-form-field> -->
+
+          <!-- Date of reservation -->
+          <!-- <mat-form-field>
+            <input matInput readonly [matDatepicker]="picker" placeholder="Date of Reservation" formControlName="reservation_date"
+              (dateChange)="formatDate($event)">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="handleError('reservation_date', 'required')">
+              Date of reservation is required
+            </mat-error>
+          </mat-form-field> -->
+  
+          <!-- Gender -->
+          <!-- <div class="misc-bottom-padding">
+            <mat-label>Gender:</mat-label>
+            <mat-radio-group aria-label="Select an option" formControlName="gender">
+              <mat-radio-button value="Male">Male</mat-radio-button>
+              <mat-radio-button value="Female">Female</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+      </mat-card> -->
+  
+      <!-- Submit & Reset -->
+      <mat-card>
+        <div class="full-wrapper button-wrapper">
+          <div class="button-wrapper">
+            <button mat-flat-button color="warn">Update</button>
+          </div>
+        </div>
+      </mat-card>
+    
+  </div>
