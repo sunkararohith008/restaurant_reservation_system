@@ -9,6 +9,9 @@ import { CustomersListComponent } from './components/customers-list/customers-li
 import { AddReservationComponent } from './components/add-reservation/add-reservation.component';
 import { EditReservationComponent } from './components/edit-reservation/edit-reservation.component';
 import { ReservationsListComponent } from './components/reservations-list/reservations-list.component';
+import { AddCashierComponent } from './components/add-cashier/add-cashier.component';
+import { EditCashierComponent } from './components/edit-cashier/edit-cashier.component';
+import { CashiersListComponent } from './components/cashiers-list/cashiers-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { ReservationsListComponent } from './components/reservations-list/reserv
     CustomersListComponent,
     AddReservationComponent,
     EditReservationComponent,
-    ReservationsListComponent
+    ReservationsListComponent,
+    AddCashierComponent,
+    EditCashierComponent,
+    CashiersListComponent
   ],
   imports: [
     BrowserModule,
